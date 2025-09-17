@@ -5,6 +5,10 @@ app=Flask(__name__, template_folder='templates')
 
 
 
+@app.route("/other", methods=["GET"])
+def other():
+    return "This is other page" 
+
 
 @app.route("/", methods=["GET"])
 def home():

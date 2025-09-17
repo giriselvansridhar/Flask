@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %} Home Page {% endblock %}
+
+{% block content %}
+
+<form method="POST" action="{{ url_for('index') }}">
+    <input type="text" name="username" placeholder="Enter username"><br>
+    <input type="password" name="password" placeholder="Enter password"><br>
+    <input type="submit" value="Submit">
+</form>
+
+<form method="POST" action="{{ url_for('upload') }}" enctype="multipart/form-data">
+    <input type="file" name="file" ><br>
+    <input type="submit" value="Upload">
+</form>
+
+
+<form method="POST" action="{{ url_for('csv')}}" enctype="multipart/form-data">
+    <input type="file" name="file" ><br>
+    <input type="submit" value="Upload">
+</form>
+
+
+{% endblock %}

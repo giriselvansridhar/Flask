@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %} Download File {% endblock %}
+
+{% block content %}
+
+<p>Your file is ready</p>
+<a href="{{ url_for('download') , file_path=file_path}}"></a>
+
+{% endblock %}
